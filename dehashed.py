@@ -35,7 +35,7 @@ def check_api_auth_success(dehashed_json_raw):
 
 def query_dehashed_domain():
     headers = {'Accept': 'application/json',}
-    params = (('query', 'domain:' + args.domain),)
+    params = (('query', 'email:' + args.domain),)
     dehashed_json_raw = requests.get('https://api.dehashed.com/search',
                             headers=headers,
                             params=params,
